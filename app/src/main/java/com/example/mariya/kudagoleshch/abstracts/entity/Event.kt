@@ -1,4 +1,4 @@
-package com.example.mariya.kudagoleshch.entity
+package com.example.mariya.kudagoleshch.abstracts.entity
 
 import android.media.Image
 import java.time.LocalDate
@@ -6,8 +6,7 @@ import java.time.LocalDate
 class Event {
     var id : Long, // - идентификатор
     var publication_date : LocalDate, // - дата публикации
-    var date_start : LocalDate, // - начало проведения
-    var date_end: LocalDate, // - конец проведения
+    var dates : Dates, // - даты проведения
     var title : String, // - название
     var short_title : String, // - короткое название
     var slug : String, // - слаг
