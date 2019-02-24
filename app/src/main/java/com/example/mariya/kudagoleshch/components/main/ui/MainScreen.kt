@@ -1,8 +1,8 @@
-package com.example.mariya.kudagoleshch.components.mainscreen.ui
+package com.example.mariya.kudagoleshch.components.main.ui
 
 import android.os.Bundle
 import com.example.mariya.kudagoleshch.R
-import com.example.mariya.kudagoleshch.components.mainscreen.backstage.MainScreenContract
+import com.example.mariya.kudagoleshch.components.main.backstage.MainScreenContract
 import com.example.mariya.kudagoleshch.abstracts.presenter.MainScreenPresenter
 import com.example.mariya.kudagoleshch.abstracts.view.BaseCompatActivity
 

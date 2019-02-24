@@ -1,4 +1,4 @@
-package com.example.mariya.kudagoleshch.components.mainscreen.backstage
+package com.example.mariya.kudagoleshch.components.main.backstage
 
 import com.example.mariya.kudagoleshch.abstracts.presenter.BasePresenter
 import com.example.mariya.kudagoleshch.abstracts.view.BaseView
