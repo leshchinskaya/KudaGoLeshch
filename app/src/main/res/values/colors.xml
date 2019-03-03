@@ -7,5 +7,5 @@
     <!-- Base colors -->
     <color name="colorBlack">#000000</color>
     <color name="colorWhite">#FFFFFF</color>
-    <color name="events_list_city_color">#E53E39</color>
+    <color name="colorRed">#E53E39</color>
 </resources>

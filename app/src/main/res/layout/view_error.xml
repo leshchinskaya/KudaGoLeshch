@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <android.support.v7.widget.LinearLayoutCompat
+        android:layout_width="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.AppCompatImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_marginBottom="8dp"
+            app:srcCompat="@drawable/ic_portable_wifi_off_black"/>
+
+        <android.support.v7.widget.AppCompatTextView
+            android:textSize="16sp"
+            app:fontFamily="@font/roboto_medium"
+            tools:text="Ошибка загрузки данных, проверьте соединение с интернетом"
+            android:gravity="center"
+            android:layout_marginTop="8dp"
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_height="wrap_content"/>
+    </android.support.v7.widget.LinearLayoutCompat>
+
+    <android.support.v7.widget.LinearLayoutCompat
+        android:layout_width="match_parent"
+        android:background="@color/colorRed"
+        android:layout_height="80dp">
+
+        <android.support.v7.widget.AppCompatTextView
+            android:layout_width="match_parent"
+            android:layout_margin="16dp"
+            tools:text="Невозможно загрузить данные, проверьте соединение с интернетом."
+            android:textSize="14sp"
+            app:fontFamily="@font/roboto_medium"
+            android:textColor="@color/colorWhite"
+            android:layout_height="match_parent"/>
+    </android.support.v7.widget.LinearLayoutCompat>
+
+
+</RelativeLayout>
