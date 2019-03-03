@@ -4,6 +4,7 @@ import android.media.Image
 import java.time.LocalDate
 
 class Event {
+    /*
     var id : Long, // - идентификатор
     var publication_date : LocalDate, // - дата публикации
     var dates : Dates, // - даты проведения
@@ -25,5 +26,6 @@ class Event {
     var site_url : String, // - адрес события на сайте kudago.com
     var tags : String, // - тэги события
     var participants : String // - агенты события
+    */
 
 }

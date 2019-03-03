@@ -5,18 +5,16 @@ import com.example.mariya.kudagoleshch.abstracts.presenter.BasePresenter
 import com.example.mariya.kudagoleshch.abstracts.view.BaseCompatActivity
 import com.example.mariya.kudagoleshch.abstracts.view.BaseView
 
-annotation class Inject
 abstract class BaseActivity<V : BaseView, P : BasePresenter<V>> : BaseCompatActivity() {
-    @Inject
-    lateinit var mvpPresenter: P
+    lateinit var presenter: P
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        mvpPresenter.attach(this as V)
+        presenter.attach(this as V)
     }
 
     override fun onDestroy() {
-        mvpPresenter.detach()
+        presenter.detach()
         super.onDestroy()
     }
 }

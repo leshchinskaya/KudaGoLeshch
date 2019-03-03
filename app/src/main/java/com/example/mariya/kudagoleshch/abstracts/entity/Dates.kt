@@ -4,6 +4,7 @@ import java.sql.Time
 import java.util.*
 
 class Dates {
+    /*
     var start_date : Date,
     var start_time : Time,
     var start : Long,
@@ -15,4 +16,5 @@ class Dates {
     var is_startless : Boolean,
     var schedules : Array<String>,
     var use_place_schedule : Boolean
+    */
 }
