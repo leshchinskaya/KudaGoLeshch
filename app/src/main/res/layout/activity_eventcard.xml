@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/card_view"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center"
+    card_view:cardCornerRadius="10dp"
+    android:layout_marginLeft="8dp"
+    android:layout_marginRight="8dp"
+    style="@style/MyCardViewStyle">
+
+    <android.support.v7.widget.AppCompatImageView
+        android:id="@+id/photo"
+        android:layout_width="match_parent"
+        android:layout_height="160dp"
+        android:layout_marginTop="0dp"
+        android:background="@color/colorBlack"
+        card_view:layout_constraintHorizontal_bias="1.0"
+        card_view:layout_constraintLeft_toLeftOf="parent"
+        card_view:layout_constraintRight_toRightOf="parent"
+        card_view:layout_constraintTop_toTopOf="parent" />
+
+    <android.support.v7.widget.AppCompatTextView
+        android:id="@+id/eventTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="60dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginTop="180dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:gravity="start"
+        android:maxLines="2"
+        android:text="МУЗЫКАЛЬНЫЙ ФЕСТИВАЛЬ LIVEFEST SUMMER"
+        android:textAllCaps="true"
+        android:textColor="@color/colorBlack"
+        android:textSize="16sp"
+        card_view:fontFamily="@font/roboto_bold"
+        card_view:layout_constraintLeft_toLeftOf="parent"
+        card_view:layout_constraintRight_toRightOf="parent"
+        card_view:layout_constraintTop_toBottomOf="@+id/photo" />
+
+        <android.support.v7.widget.AppCompatTextView
+            android:id="@+id/eventDescription"
+            android:layout_width="match_parent"
+            android:layout_marginLeft="0dp"
+            android:layout_marginStart="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="230dp"
+            android:text="Первый фестиваль LiveFest на курорте «Роза Хутор» собрал перспективные музыкальные..."
+            android:textColor="@color/colorBlack"
+            android:textSize="14sp"
+            android:gravity="start"
+            android:maxLines="2"
+            card_view:fontFamily="@font/roboto_light"
+            card_view:layout_constraintLeft_toLeftOf="parent"
+            card_view:layout_constraintRight_toRightOf="parent"
+            card_view:layout_constraintTop_toBottomOf="@+id/eventTitle"
+            android:layout_height="wrap_content"/>
+
+    <include
+        android:id="@+id/eventInfo"
+        layout="@layout/textview_info"
+        android:layout_width="match_parent"
+        android:layout_height="120dp"
+        android:layout_marginStart="0dp"
+        android:layout_marginTop="280dp"
+        android:layout_marginEnd="8dp"
+        card_view:layout_constraintEnd_toEndOf="parent"
+        card_view:layout_constraintStart_toStartOf="parent"
+        card_view:layout_constraintTop_toBottomOf="@+id/eventDescription" />
+
+
+</android.support.v7.widget.CardView>
