@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
-    android:layout_height="56dp">
+    android:layout_height="56dp"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".CityActivity">
 
     <TextView
-        android:id="@+id/text_view_city"
+        android:id="@+id/text_city"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentStart="true"
@@ -17,8 +18,9 @@
         android:layout_margin="16dp"/>
 
     <ImageView
-        android:id="@+id/image_view_check"
+        android:id="@+id/image_check"
         android:src="@drawable/ic_check"
+        android:visibility="invisible"
         android:layout_width="18dp"
         android:layout_height="14dp"
         android:layout_alignParentEnd="true"
