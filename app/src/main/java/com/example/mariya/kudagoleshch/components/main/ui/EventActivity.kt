@@ -3,9 +3,9 @@ package com.example.mariya.kudagoleshch.components.main.ui
 import android.os.Bundle
 import com.example.mariya.kudagoleshch.MainActivity
 import com.example.mariya.kudagoleshch.R
-import com.example.mariya.kudagoleshch.abstracts.presenter.EventPresenter
+import com.example.mariya.kudagoleshch.abstracts.presenter.EventPresenterClass
 import com.example.mariya.kudagoleshch.abstracts.view.EventView
-
+/*
 abstract class EventActivity: BaseActivity<EventView, EventPresenter>(), EventView {
     override fun onCreate(savedInstanceState: Bundle?) {
         //MainActivity.component.inject(this)
@@ -13,3 +13,4 @@ abstract class EventActivity: BaseActivity<EventView, EventPresenter>(), EventVi
         setContentView(R.layout.activity_event)
     }
 }
+        */

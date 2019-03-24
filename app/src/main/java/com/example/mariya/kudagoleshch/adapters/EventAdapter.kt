@@ -7,6 +7,9 @@ import android.view.View
 import android.view.ViewGroup
 import com.example.mariya.kudagoleshch.R
 import com.example.mariya.kudagoleshch.abstracts.entity.Event
+import kotlinx.android.synthetic.main.activity_event.view.*
+import kotlinx.android.synthetic.main.activity_eventcard.view.*
+import kotlinx.android.synthetic.main.textview_info.view.*
 
 class EventAdapter (private val items: ArrayList<Event>) : RecyclerView.Adapter<EventAdapter.EventViewHolder>() {
 
@@ -31,20 +34,11 @@ class EventAdapter (private val items: ArrayList<Event>) : RecyclerView.Adapter<
     }
 
     class EventViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-        var eventName: AppCompatTextView
-        var eventDescription: AppCompatTextView
-        var eventPlace: AppCompatTextView
-        var eventDates: AppCompatTextView
-        var eventPrice: AppCompatTextView
+        val eventName = view.eventTitle
+        val eventDescription = view.eventDescription
+        val eventPlace = view.description
+        val eventDates = view.description2
+        val eventPrice = view.description3
 
-        init {
-            super.itemView
-            eventName = itemView.findViewById(R.id.eventTitle) as AppCompatTextView
-            eventDescription = itemView.findViewById(R.id.eventDescription) as AppCompatTextView
-            eventPlace = itemView.findViewById(R.id.description) as AppCompatTextView
-            eventDates = itemView.findViewById(R.id.description2) as AppCompatTextView
-            eventPrice = itemView.findViewById(R.id.description3) as AppCompatTextView
-
-        }
     }
 }

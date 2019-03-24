@@ -5,14 +5,15 @@
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_gravity="center"
-    card_view:cardCornerRadius="10dp"
-    style="@style/MyCardViewStyle">
+    android:layout_margin="8dp"
+    card_view:cardCornerRadius="16dp"
+    card_view:cardElevation="16dp">
 
     <android.support.v7.widget.AppCompatImageView
         android:id="@+id/photo"
         android:layout_width="match_parent"
         android:layout_height="160dp"
-        android:layout_marginTop="0dp"
+        android:scaleType="centerCrop"
         android:background="@drawable/test_photo"
         card_view:layout_constraintHorizontal_bias="1.0"
         card_view:layout_constraintLeft_toLeftOf="parent"
@@ -24,7 +25,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="60dp"
-        android:layout_marginLeft="0dp"
+        android:layout_marginLeft="10dp"
         android:layout_marginTop="180dp"
         android:layout_marginEnd="16dp"
         android:layout_marginRight="16dp"
@@ -42,7 +43,7 @@
         <android.support.v7.widget.AppCompatTextView
             android:id="@+id/eventDescription"
             android:layout_width="match_parent"
-            android:layout_marginLeft="0dp"
+            android:layout_marginLeft="10dp"
             android:layout_marginStart="16dp"
             android:layout_marginRight="16dp"
             android:layout_marginEnd="16dp"

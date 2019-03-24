@@ -1,11 +1,16 @@
 package com.example.mariya.kudagoleshch
 
+import android.app.Activity
+import android.content.BroadcastReceiver
+import android.content.Context
 import android.content.Intent
 import android.os.Bundle
+import android.os.Parcelable
 import android.support.v7.app.AppCompatActivity
 import android.view.View
 import com.example.mariya.kudagoleshch.abstracts.entity.City
 import android.support.v7.widget.LinearLayoutManager
+import android.support.v7.widget.RecyclerView
 import com.example.mariya.kudagoleshch.R
 import com.example.mariya.kudagoleshch.adapters.CityAdapter
 import kotlinx.android.synthetic.main.activity_city.*
@@ -15,14 +20,24 @@ import kotlinx.android.synthetic.main.toolbar.*
 
 class CityActivity: AppCompatActivity() {
     var cities: ArrayList<City> = ArrayList()
+    lateinit var nameOfCurrentCity: String
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_city)
 
+        //String count = getIntent().getIntExtra("currentCity", nameOfCurrentCity);
+        nameOfCurrentCity = getIntent().getStringExtra("currentCity");
+
+        /*
+        if (intent != null) {
+            nameOfCurrentCity = intent.action
+        }
+        */
+
         addCities()
         city.layoutManager = LinearLayoutManager(this)
-        city.adapter = CityAdapter(cities)
+        city.adapter = CityAdapter(cities, onClickCity, nameOfCurrentCity)
 
 
         if (savedInstanceState != null && savedInstanceState.containsKey("cities")) {
@@ -30,8 +45,6 @@ class CityActivity: AppCompatActivity() {
         }
 
         ib_close.setOnClickListener { finish() }
-        tv_select.setOnClickListener { onClickCity() }
-        city.setOnClickListener { onClickCity() }
     }
 
     fun addCities(){
@@ -60,14 +73,10 @@ class CityActivity: AppCompatActivity() {
         onBackPressed()
     }
 
-    fun onClickCityS () {
-        onBackPressed()
-    }
-
-    private fun onClickCity () {
-        //val intentSelectCity = Intent(this, MainActivity::class.java)
-        //intentSelectCity.putExtra("currentCity", "Воронеж")
-        //startActivityForResult(intentSelectCity, 100)
-        //onBackPressed()
+    private val onClickCity = fun(city: City) : Unit {
+        val intentSelectCity = Intent()
+        intentSelectCity.putExtra("selectedCity", "Воронеж")
+        setResult(Activity.RESULT_OK, intentSelectCity)
+        finish()
     }
 }

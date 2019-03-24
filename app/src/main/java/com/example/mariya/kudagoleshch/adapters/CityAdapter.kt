@@ -8,9 +8,12 @@ import android.widget.TextView
 import com.example.mariya.kudagoleshch.R
 import com.example.mariya.kudagoleshch.abstracts.entity.City
 import kotlinx.android.synthetic.main.activity_main.*
+import kotlinx.android.synthetic.main.city.view.*
+import kotlinx.android.synthetic.main.toolbar.view.*
 
-class CityAdapter(private val items: ArrayList<City>) : RecyclerView.Adapter<CityAdapter.CityViewHolder>() {
+class CityAdapter(private val items: ArrayList<City>, val callback: (City)-> Unit, val nameCurrent: String) : RecyclerView.Adapter<CityAdapter.CityViewHolder>() {
 
+    val selectedCity = City
 
     override fun getItemCount(): Int {
         return items.size
@@ -24,14 +27,13 @@ class CityAdapter(private val items: ArrayList<City>) : RecyclerView.Adapter<Cit
         val item = items[p1]
 
         p0.cityName.text = item.nameInfo
+        if (p0.cityName.text==nameCurrent ) { p0.imageCheck.visibility = View.VISIBLE}
+        p0.container.setOnClickListener { callback(item)}
     }
 
     class CityViewHolder(view: View) : RecyclerView.ViewHolder(view) {
-        var cityName: TextView
-
-        init {
-            super.itemView
-            cityName = itemView.findViewById(R.id.text_city) as TextView
-        }
+        val cityName = view.text_city
+        val container = view
+        val imageCheck = view.image_check
     }
 }
