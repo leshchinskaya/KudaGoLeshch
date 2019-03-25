@@ -13,7 +13,6 @@ class EventActivity : AppCompatActivity() {
 
     }
 
-
     fun onClickArrow(v: View) {
         onBackPressed()
     }

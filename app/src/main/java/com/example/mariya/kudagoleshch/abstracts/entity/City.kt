@@ -2,8 +2,9 @@ package com.example.mariya.kudagoleshch.abstracts.entity
 
 import android.os.Parcel
 import android.os.Parcelable
+import java.io.Serializable
 
-class City(private var cityName : String): Parcelable {
+class City(private var cityName : String): Parcelable, Serializable {
 
     constructor(parcel: Parcel) : this(
             parcel.readString()

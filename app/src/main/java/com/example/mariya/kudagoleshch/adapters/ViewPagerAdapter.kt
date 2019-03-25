@@ -8,36 +8,39 @@ import android.support.v7.widget.AppCompatImageView
 import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
+import com.bumptech.glide.Glide
 import com.example.mariya.kudagoleshch.R
 import com.squareup.picasso.Picasso
 
-class ViewPagerAdapter(private val context: Context, private val images: ArrayList<String>) : PagerAdapter() {
+class ViewPagerAdapter: PagerAdapter() {
 
-    override fun getCount(): Int {
-        return images.size
+    private var photoList: List<String> = emptyList()
+
+    fun setData(photoList: List<String>) {
+        this.photoList = photoList
+        notifyDataSetChanged()
     }
 
-    override fun isViewFromObject(p0: View, p1: Any): Boolean {
-        return p0 == (p1 as View)
+    override fun destroyItem(collection: ViewGroup, position: Int, view: Any) {
+        (collection as ViewPager).removeView(view as View)
     }
 
-    /*adding imageView with a photo to ViewPager on each page*/
     override fun instantiateItem(container: ViewGroup, position: Int): Any {
-        val imageView = AppCompatImageView(context)
-        imageView.setBackgroundColor(ContextCompat.getColor(context, R.color.colorGray))
-        imageView.scaleType = ImageView.ScaleType.CENTER_CROP
-
-        val vP = container as ViewPager
-        vP.addView(imageView)
-
-        Picasso.get().load(images[position])
-                .error(R.drawable.ic_photo_error_png).into(imageView)
-
-        return imageView
+        val view = buildPageContentView(container.context, photoList[position])
+        container.addView(view)
+        return view
     }
 
-    override fun destroyItem(container: ViewGroup, position: Int, `object`: Any) {
-        (container as ViewPager).removeView(`object` as AppCompatImageView)
-    }
+    override fun isViewFromObject(view: View, obj: Any): Boolean =
+        view == obj
 
+    override fun getCount(): Int =
+        photoList.size
+
+    private fun buildPageContentView(context: Context, photoUrl: String): View {
+        val image: ImageView = ImageView(context)
+        image.setImageResource(R.drawable.test_photo)
+        image.scaleType = ImageView.ScaleType.CENTER_CROP
+        return image
+    }
 }

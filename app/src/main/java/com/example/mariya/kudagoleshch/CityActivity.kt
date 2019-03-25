@@ -59,6 +59,7 @@ class CityActivity: AppCompatActivity() {
         cities.add(City("Красноярск"))
     }
 
+    /*
     override fun onSaveInstanceState(outState: Bundle?) {
         super.onSaveInstanceState(outState)
 
@@ -68,6 +69,7 @@ class CityActivity: AppCompatActivity() {
             //initRecyclerView()
         }
     }
+    */
 
     fun onClickCross(v : View){
         onBackPressed()
@@ -75,8 +77,8 @@ class CityActivity: AppCompatActivity() {
 
     private val onClickCity = fun(city: City) : Unit {
         val intentSelectCity = Intent()
-        intentSelectCity.putExtra("selectedCity", "Воронеж")
+        intentSelectCity.putExtra("selectedCity", city.nameInfo)
         setResult(Activity.RESULT_OK, intentSelectCity)
-        finish()
+        onBackPressed()
     }
 }

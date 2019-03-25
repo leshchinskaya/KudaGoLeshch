@@ -1,6 +1,7 @@
 package com.example.mariya.kudagoleshch.abstracts.entity
 
 import android.media.Image
+import java.io.Serializable
 import java.time.LocalDate
 
 class Event(
@@ -10,7 +11,7 @@ class Event(
         private val dates: String,
         private val price: String
         //private val imageURL: String
-) {
+): Serializable {
 
     val titleInfo: String
         get() = title

@@ -1,27 +1,38 @@
 package com.example.mariya.kudagoleshch
 
-import android.os.Build
+import android.content.Context
 import android.os.Bundle
+import android.support.v4.view.ViewPager
 import android.support.v7.app.AppCompatActivity
-import android.text.Html
-import android.widget.LinearLayout
+import android.view.View
+import android.view.ViewGroup
+import android.widget.ImageView
 import com.example.mariya.kudagoleshch.adapters.ViewPagerAdapter
-import kotlinx.android.synthetic.main.activity_event.*
 import kotlinx.android.synthetic.main.eventtoolbar.*
-import kotlinx.android.synthetic.main.textview_info.*
 
 class DetailingEventActivity: AppCompatActivity() {
+
+    private lateinit var mPhotoAdapter: ViewPagerAdapter
+    private lateinit var mViewPager: ViewPager
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_event)
 
-        fillingActivity()
+        mViewPager = findViewById(R.id.pager)
+        mPhotoAdapter = ViewPagerAdapter()
+        mPhotoAdapter.setData(arrayListOf<String>("", ""))
+        mViewPager.adapter = mPhotoAdapter
+
+        //detailActivity()
 
         image_view_back.setOnClickListener { onBackPressed() }
     }
 
-    private fun fillingActivity() {
+
+    private fun detailActivity() {
+
+        /*
         val arguments = intent.extras
 
         if (arguments != null) {
@@ -29,7 +40,6 @@ class DetailingEventActivity: AppCompatActivity() {
             if (images.size > 0) {
                 val viewPager = pager
 
-                /*create adapter for ViewPager with received images*/
                 val viewPagerAdapter = ViewPagerAdapter(this, images)
                 viewPager.adapter = viewPagerAdapter
 
@@ -84,7 +94,8 @@ class DetailingEventActivity: AppCompatActivity() {
                 )
             }
         }
-
+*/
     }
+
 
 }
