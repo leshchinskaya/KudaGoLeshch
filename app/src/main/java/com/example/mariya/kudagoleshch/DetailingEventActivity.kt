@@ -8,6 +8,7 @@ import android.view.View
 import android.view.ViewGroup
 import android.widget.ImageView
 import com.example.mariya.kudagoleshch.adapters.ViewPagerAdapter
+import kotlinx.android.synthetic.main.activity_event.*
 import kotlinx.android.synthetic.main.eventtoolbar.*
 
 class DetailingEventActivity: AppCompatActivity() {
@@ -21,8 +22,10 @@ class DetailingEventActivity: AppCompatActivity() {
 
         mViewPager = findViewById(R.id.pager)
         mPhotoAdapter = ViewPagerAdapter()
-        mPhotoAdapter.setData(arrayListOf<String>("", ""))
+        //mPhotoAdapter.setData(arrayListOf<String>("", ""))
         mViewPager.adapter = mPhotoAdapter
+        pager_indicator.setViewPager(mViewPager)
+        mPhotoAdapter.setData(arrayListOf<String>("", ""))
 
         //detailActivity()
 

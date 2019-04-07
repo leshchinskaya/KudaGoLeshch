@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+xmlns:android="http://schemas.android.com/apk/res/android"
+android:background="#00FFFFFF"
+android:orientation="horizontal"
+android:layout_width="match_parent"
+android:layout_height="60dp">
+
+<com.example.mariya.kudagoleshch.PagerIndicator
+    android:id="@+id/pager_indicator"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:layout_gravity="bottom"
+    android:layout_marginBottom="20dp"
+    android:layout_margin="0dp"/>
+
+</android.support.design.widget.CoordinatorLayout>
