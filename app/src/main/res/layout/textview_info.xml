@@ -1,83 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:id="@+id/info"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools">
-
-    <android.support.v7.widget.AppCompatImageView
-        android:id="@+id/icon"
-        android:layout_width="wrap_content"
+    android:orientation="vertical"
+    android:id="@+id/time_and_date_linear_layout"
+    >
+    <LinearLayout android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="16dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        android:layout_gravity="center_vertical"
-        android:src="@drawable/ic_location"
-        tools:ignore="MissingConstraints" />
-
-    <android.support.v7.widget.AppCompatTextView
-        android:id="@+id/description"
-        android:layout_width="0dp"
+        android:layout_marginBottom="8dp"
+        android:id="@+id/event_place_linear_layout"
+        >
+        <ImageView android:layout_width="24dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_location"
+            android:background="@drawable/back"
+            android:padding="4dp"
+            />
+        <TextView android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/description"
+            android:text="ЦПКиО им. Горького"
+            android:textSize="14sp"
+            android:textColor="#99000000"
+            android:layout_marginLeft="8dp"
+            />
+    </LinearLayout>
+    <LinearLayout android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_vertical"
-        android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp"
-        android:text="ЦПКиО им. Горького"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/icon"
-        tools:ignore="MissingConstraints" />
+        android:layout_marginBottom="8dp"
+        android:id="@+id/event_date_linear_layout"
+        >
+        <ImageView android:layout_width="24dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_calendar"
+            android:background="@drawable/back"
+            android:padding="4dp"
+            />
+        <TextView android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/description2"
+            android:text="10-11 августа"
+            android:textSize="14sp"
+            android:textColor="#99000000"
+            android:layout_marginLeft="8dp"
 
-    <android.support.v7.widget.AppCompatImageView
-        android:id="@+id/icon2"
-        android:layout_width="wrap_content"
+            />
+    </LinearLayout>
+    <LinearLayout android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/icon"
-        android:layout_margin="16dp"
-        android:layout_gravity="center_vertical"
-        android:src="@drawable/ic_calendar"/>
-
-    <android.support.v7.widget.AppCompatTextView
-        android:id="@+id/description2"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-
-        android:layout_gravity="center_vertical"
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="8dp"
-        android:text="10-11 августа"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/icon2"
-        app:layout_constraintTop_toBottomOf="@+id/icon" />
-
-    <android.support.v7.widget.AppCompatImageView
-        android:id="@+id/icon3"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_vertical"
-        android:layout_margin="16dp"
-        android:layout_marginLeft="16dp"
-        android:layout_marginTop="28dp"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/icon2"
-        android:src="@drawable/ic_rubble" />
-
-    <android.support.v7.widget.AppCompatTextView
-        android:id="@+id/description3"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_vertical"
-
-        android:layout_marginStart="8dp"
-        android:layout_marginTop="20dp"
-        android:layout_marginEnd="8dp"
-        android:text="1200-1500 Р"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintStart_toEndOf="@+id/icon3"
-        app:layout_constraintTop_toBottomOf="@+id/icon2" />
-
-</android.support.constraint.ConstraintLayout>
+        android:id="@+id/event_price_linear_layout">
+        <ImageView android:layout_width="24dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_rubble"
+            android:background="@drawable/back"
+            android:padding="4dp"
+            />
+        <TextView android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/description3"
+            android:text="1 200 - 1 500 ₽"
+            android:textSize="14sp"
+            android:textColor="#99000000"
+            android:layout_marginLeft="8dp"
+            />
+    </LinearLayout>
+</LinearLayout>

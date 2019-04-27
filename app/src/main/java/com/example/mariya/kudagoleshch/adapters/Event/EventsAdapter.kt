@@ -84,12 +84,17 @@ class EventsAdapter: RecyclerView.Adapter<RecyclerView.ViewHolder> {
         private var mHeaderText: TextView = itemView.findViewById(R.id.eventTitle)
         private var mDescription: TextView = itemView.findViewById(R.id.eventDescription)
         private var mContentPlace: TextView = itemView.findViewById(R.id.description)
-        private var mLinearPlace: LinearLayout = itemView.findViewById(R.id.icon)
+        //private var mLinearPlace: LinearLayout = itemView.findViewById(R.id.icon)
         private var mContentDate: TextView = itemView.findViewById(R.id.description2)
-        private var mLinearDate: LinearLayout = itemView.findViewById(R.id.icon2)
+        //private var mLinearDate: LinearLayout = itemView.findViewById(R.id.icon2)
         private var mContentPrice: TextView = itemView.findViewById(R.id.description3)
-        private var mLinearPrice: LinearLayout = itemView.findViewById(R.id.icon3)
-        private var mDatePlacePriceLinearLayout: LinearLayout = itemView.findViewById(R.id.info)
+        //private var mLinearPrice: LinearLayout = itemView.findViewById(R.id.icon3)
+        //private var mDatePlacePriceLinearLayout: LinearLayout = itemView.findViewById(R.id.info)
+        private var mLinearPlace: LinearLayout = itemView.findViewById(R.id.event_place_linear_layout)
+        private var mLinearDate: LinearLayout = itemView.findViewById(R.id.event_date_linear_layout)
+        private var mLinearPrice: LinearLayout = itemView.findViewById(R.id.event_price_linear_layout)
+        private var mDatePlacePriceLinearLayout: LinearLayout = itemView.findViewById(R.id.eventInfo)
+
 
         fun bind(eventModel: EventModel) {
             Picasso.get().

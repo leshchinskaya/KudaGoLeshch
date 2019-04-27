@@ -28,7 +28,7 @@ class ChooseCityActivity : AppCompatActivity(), CitiesView.View, CitiesAdapter.O
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_city)
-        setSupportActionBar(toolbar)
+       // setSupportActionBar(toolbar)
         supportActionBar!!.setDisplayShowTitleEnabled(false)
         supportActionBar!!.setTitle("")
 

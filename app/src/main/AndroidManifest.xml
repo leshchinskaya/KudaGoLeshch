@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.mariya.kudagoleshch">
-
+    <uses-permission android:name="android.permission.INTERNET"/>
     <application
         android:allowBackup="false"
         android:icon="@mipmap/ic_launcher"
@@ -10,8 +10,6 @@
         android:supportsRtl="false"
         android:theme="@style/MyTheme">
         <activity android:name=".view.City.ChooseCityActivity">
-        </activity>
-        <activity android:name=".MainActivity">
         </activity>
         <activity android:name=".view.Events.EventsActivity">
             <intent-filter>

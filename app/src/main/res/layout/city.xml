@@ -4,7 +4,7 @@
     android:layout_height="56dp"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/city"
-    tools:context=".CityActivity">
+    tools:context=".view.City.ChooseCityActivity">
 
     <TextView
         android:id="@+id/text_city"

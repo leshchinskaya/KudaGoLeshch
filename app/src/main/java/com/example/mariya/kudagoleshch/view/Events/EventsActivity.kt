@@ -30,7 +30,7 @@ class EventsActivity : AppCompatActivity(), EventsView.View, EventsAdapter.OnEve
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        setSupportActionBar(toolbar)
+       // setSupportActionBar(toolbar)
 
         mPresenter = EventsPresenter(this)
         mRvAdapter = EventsAdapter(listener = this)
