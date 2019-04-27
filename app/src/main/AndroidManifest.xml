@@ -11,6 +11,8 @@
         android:theme="@style/MyTheme">
         <activity android:name=".view.City.ChooseCityActivity">
         </activity>
+        <activity android:name=".view.Event.EventActivity">
+        </activity>
         <activity android:name=".view.Events.EventsActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />

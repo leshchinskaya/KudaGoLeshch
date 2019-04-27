@@ -49,7 +49,7 @@ class EventActivity : AppCompatActivity(), EventView.View {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_event)
         mPresenter = EventPresenter(this)
-       // mViewPager = findViewById(R.id.event_description_view_pager)
+        mViewPager = findViewById(R.id.pager)
         mViewPager.offscreenPageLimit = 3
         mPagerIndicator = findViewById(R.id.pager_indicator)
 
@@ -58,24 +58,24 @@ class EventActivity : AppCompatActivity(), EventView.View {
         mPagerIndicator.setViewPager(mViewPager)
 
        // mCloseButton = findViewById(R.id.event_close_button)
-        mCloseButton.setOnClickListener {
-            finish()
-        }
+        //mCloseButton.setOnClickListener {
+        //    finish()
+        //}
 
         mTitle = findViewById(R.id.title_event)
         mSubtitle = findViewById(R.id.shortDescription_event)
         mDescription = findViewById(R.id.fullDescription_event)
-        mContentPlace = findViewById(R.id.description)
+        //mContentPlace = findViewById(R.id.description)
        // mLinearPlace = findViewById(R.id.icon)
-        mLinearPlace = findViewById(R.id.event_place_linear_layout)
-        mContentDate = findViewById(R.id.description2)
+       // mLinearPlace = findViewById(R.id.event_place_linear_layout)
+        //mContentDate = findViewById(R.id.description2)
         //mLinearDate = findViewById(R.id.icon2)
-        mLinearDate = findViewById(R.id.event_date_linear_layout)
-        mContentPrice = findViewById(R.id.description3)
+       // mLinearDate = findViewById(R.id.event_date_linear_layout)
+        //mContentPrice = findViewById(R.id.description3)
         //mLinearPrice = findViewById(R.id.icon3)
-        mLinearPrice = findViewById(R.id.event_price_linear_layout)
+        //mLinearPrice = findViewById(R.id.event_price_linear_layout)
         //mDatePlacePriceLinearLayout = findViewById(R.id.info)
-        mDatePlacePriceLinearLayout = findViewById(R.id.time_and_date_linear_layout)
+        //mDatePlacePriceLinearLayout = findViewById(R.id.eventInfo)
 
 
         val eventModelFromIntent = intent.getSerializableExtra("eventModel")
@@ -88,9 +88,9 @@ class EventActivity : AppCompatActivity(), EventView.View {
         mDescription.text = eventModel.body_text
         mPhotoAdapter.setPhotos(eventModel.imageURL)
 
-
+/*
         if (eventModel.place != null) {
-            mContentPlace.text = eventModel.place
+            //mContentPlace.text = eventModel.place
         } else {
             mDatePlacePriceLinearLayout.removeView(mLinearPlace)
         }
@@ -104,6 +104,7 @@ class EventActivity : AppCompatActivity(), EventView.View {
         } else {
             mDatePlacePriceLinearLayout.removeView(mLinearPrice)
         }
+        */
 
     }
 }
