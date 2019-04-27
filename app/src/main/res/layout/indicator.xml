@@ -6,7 +6,7 @@ android:orientation="horizontal"
 android:layout_width="match_parent"
 android:layout_height="60dp">
 
-<com.example.mariya.kudagoleshch.PagerIndicator
+<com.example.mariya.kudagoleshch.view.DetailingEvent.PagerIndicator
     android:id="@+id/pager_indicator"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"

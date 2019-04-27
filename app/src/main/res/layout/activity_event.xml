@@ -6,7 +6,7 @@
     android:id="@+id/layouts_event"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.mariya.kudagoleshch.EventActivity"
+    tools:context="com.example.mariya.kudagoleshch.view.Event.EventActivity"
     android:background="@color/colorWhite">
 
     <ScrollView
@@ -28,7 +28,7 @@
                 android:background="@drawable/test_photo"
                 android:scaleType="centerCrop"/>
 
-            <com.example.mariya.kudagoleshch.PagerIndicator
+            <com.example.mariya.kudagoleshch.view.DetailingEvent.PagerIndicator
                 android:id="@+id/pager_indicator"
                 android:layout_width="match_parent"
                 android:layout_height="500dp"

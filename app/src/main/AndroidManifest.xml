@@ -9,13 +9,11 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="false"
         android:theme="@style/MyTheme">
-        <activity android:name=".CityActivity">
-        </activity>
-        <activity android:name=".EventActivity">
+        <activity android:name=".view.City.ChooseCityActivity">
         </activity>
         <activity android:name=".MainActivity">
         </activity>
-        <activity android:name=".DetailingEventActivity">
+        <activity android:name=".view.Events.EventsActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

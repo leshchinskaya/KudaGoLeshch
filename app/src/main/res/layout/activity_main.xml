@@ -6,7 +6,7 @@
     android:id="@+id/swipeRefreshLayout"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".view.Events.EventsActivity">
 
 <android.support.constraint.ConstraintLayout
 
@@ -18,8 +18,7 @@
         android:id="@+id/idtoolbar"
         layout="@layout/toolbar"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toTopOf="parent" />
+        android:layout_height="wrap_content" />
 
     <android.support.v7.widget.AppCompatTextView
         android:id="@+id/title"
