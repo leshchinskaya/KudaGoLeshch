@@ -1,7 +1,6 @@
 package com.example.mariya.kudagoleshch.presenter.Events
 
 import android.content.Context
-import com.example.mariya.kudagoleshch.view.Events.EventsRepository
 import com.example.mariya.kudagoleshch.view.Events.EventsView
 
 class EventsPresenter: EventsView.Presenter {

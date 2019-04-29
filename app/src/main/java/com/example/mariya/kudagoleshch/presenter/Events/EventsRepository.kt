@@ -1,8 +1,9 @@
-package com.example.mariya.kudagoleshch.view.Events
+package com.example.mariya.kudagoleshch.presenter.Events
 
 import android.content.Context
 import com.example.mariya.kudagoleshch.model.EventModel
 import com.example.mariya.kudagoleshch.network.KudaGoBaseApiRepository
+import com.example.mariya.kudagoleshch.view.Events.EventsView
 
 class EventsRepository: EventsView.Repository {
 

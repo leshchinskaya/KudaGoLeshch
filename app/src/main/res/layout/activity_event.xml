@@ -28,7 +28,7 @@
                 android:background="@drawable/test_photo"
                 android:scaleType="centerCrop"/>
 
-            <com.example.mariya.kudagoleshch.view.DetailingEvent.PagerIndicator
+            <com.example.mariya.kudagoleshch.view.Event.PagerIndicator
                 android:id="@+id/pager_indicator"
                 android:layout_width="match_parent"
                 android:layout_height="500dp"

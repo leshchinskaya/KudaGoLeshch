@@ -1,4 +1,4 @@
-package com.example.mariya.kudagoleshch.view.DetailingEvent
+package com.example.mariya.kudagoleshch.view.Event
 
 import android.content.Context
 import android.graphics.Canvas

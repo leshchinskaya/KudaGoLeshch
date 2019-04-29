@@ -1,4 +1,4 @@
-package com.example.mariya.kudagoleshch.view.Event
+package com.example.mariya.kudagoleshch.presenter.Event
 
 /*
 class EventRepository: EventView.Repository {

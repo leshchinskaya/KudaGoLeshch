@@ -15,9 +15,8 @@ import com.example.mariya.kudagoleshch.R
 import com.example.mariya.kudagoleshch.model.CityModel
 import com.example.mariya.kudagoleshch.model.EventModel
 import com.example.mariya.kudagoleshch.presenter.Events.EventsPresenter
-import com.example.mariya.kudagoleshch.adapters.Event.EventsAdapter
+import com.example.mariya.kudagoleshch.adapters.Events.EventsAdapter
 import com.example.mariya.kudagoleshch.view.Event.EventActivity
-import kotlinx.android.synthetic.main.toolbar.*
 
 class EventsActivity : AppCompatActivity(), EventsView.View, EventsAdapter.OnEventClick {
     private lateinit var mRvEvents: RecyclerView

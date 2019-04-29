@@ -6,11 +6,11 @@ import android.support.v7.app.AppCompatActivity
 import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
-import com.example.mariya.kudagoleshch.view.DetailingEvent.PagerIndicator
 import com.example.mariya.kudagoleshch.R
 import com.example.mariya.kudagoleshch.model.EventModel
 import com.example.mariya.kudagoleshch.presenter.Event.EventPresenter
 import com.example.mariya.kudagoleshch.adapters.Event.EventPhotosAdapter
+import kotlinx.android.synthetic.main.eventtoolbar.*
 
 
 class EventActivity : AppCompatActivity(), EventView.View {
@@ -31,19 +31,11 @@ class EventActivity : AppCompatActivity(), EventView.View {
     private lateinit var mPhotoAdapter: EventPhotosAdapter
     private lateinit var mViewPager: ViewPager
     private lateinit var mPagerIndicator: PagerIndicator
-    private lateinit var mCloseButton: ImageView
     private lateinit var mPresenter: EventPresenter
 
     private lateinit var mTitle: TextView
     private lateinit var mSubtitle: TextView
     private lateinit var mDescription: TextView
-    private lateinit var mContentPlace: TextView
-    private lateinit var mLinearPlace: LinearLayout
-    private lateinit var mContentDate: TextView
-    private lateinit var mLinearDate: LinearLayout
-    private lateinit var mContentPrice: TextView
-    private lateinit var mLinearPrice: LinearLayout
-    private lateinit var mDatePlacePriceLinearLayout: LinearLayout
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -57,26 +49,13 @@ class EventActivity : AppCompatActivity(), EventView.View {
         mViewPager.adapter = mPhotoAdapter
         mPagerIndicator.setViewPager(mViewPager)
 
-       // mCloseButton = findViewById(R.id.event_close_button)
-        //mCloseButton.setOnClickListener {
-        //    finish()
-        //}
 
         mTitle = findViewById(R.id.title_event)
         mSubtitle = findViewById(R.id.shortDescription_event)
         mDescription = findViewById(R.id.fullDescription_event)
-        //mContentPlace = findViewById(R.id.description)
-       // mLinearPlace = findViewById(R.id.icon)
-       // mLinearPlace = findViewById(R.id.event_place_linear_layout)
-        //mContentDate = findViewById(R.id.description2)
-        //mLinearDate = findViewById(R.id.icon2)
-       // mLinearDate = findViewById(R.id.event_date_linear_layout)
-        //mContentPrice = findViewById(R.id.description3)
-        //mLinearPrice = findViewById(R.id.icon3)
-        //mLinearPrice = findViewById(R.id.event_price_linear_layout)
-        //mDatePlacePriceLinearLayout = findViewById(R.id.info)
-        //mDatePlacePriceLinearLayout = findViewById(R.id.eventInfo)
 
+
+        //image_view_back.setOnClickListener { onBackPressed() }
 
         val eventModelFromIntent = intent.getSerializableExtra("eventModel")
         mPresenter.showEvent(eventModelFromIntent as EventModel)
@@ -88,23 +67,6 @@ class EventActivity : AppCompatActivity(), EventView.View {
         mDescription.text = eventModel.body_text
         mPhotoAdapter.setPhotos(eventModel.imageURL)
 
-/*
-        if (eventModel.place != null) {
-            //mContentPlace.text = eventModel.place
-        } else {
-            mDatePlacePriceLinearLayout.removeView(mLinearPlace)
-        }
-        if (eventModel.date != null) {
-            mContentDate.text = eventModel.date
-        } else {
-            mDatePlacePriceLinearLayout.removeView(mLinearDate)
-        }
-        if (eventModel.price != null && eventModel.price!!.count() > 0) {
-            mContentPrice.text = eventModel.price
-        } else {
-            mDatePlacePriceLinearLayout.removeView(mLinearPrice)
-        }
-        */
 
     }
 }
